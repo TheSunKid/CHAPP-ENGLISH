@@ -12,7 +12,7 @@ import {
     Button,
     TextInput
 } from 'react-native';
-import Option from "../Option"
+import Option from "../../Option"
 const ForgotPassword = ({ navigation }) => {
     const [SDT, onChangeSDT] = useState('');
     const [Password, onChangePass] = useState('');

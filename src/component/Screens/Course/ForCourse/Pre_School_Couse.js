@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, FlatList, ScrollView } from 'react-native';
 
-import ComboPre from '../../Course/ComboVoucher/ComboPre';
+import ComboPre from '../ComboVoucher/ComboPre';
  
 export default function Pre_School_Couse () {
   const [items, setItems] = React.useState([

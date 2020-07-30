@@ -20,11 +20,6 @@ const Tab = createMaterialTopTabNavigator();
 
 function TabStack() {
   return (
-    
-  
-   
-   
-  
     <Tab.Navigator
       initialRouteName="Feed"
       tabBarOptions={{
@@ -77,8 +72,6 @@ function TabStack() {
 
 function PreSchoolNav() {
   return (
-
-
       <Stack.Navigator
         initialRouteName="Settings"
         screenOptions={{

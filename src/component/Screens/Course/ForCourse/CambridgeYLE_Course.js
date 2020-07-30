@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text,FlatList, ScrollView } from 'react-native';
-import ComboCambridge from '../../Course/ComboVoucher/ComboCambridge';
+import ComboCambridge from '../ComboVoucher/ComboCambridge';
  
 export default function CambridgeYLE_Course() {
   const [items, setItems] = React.useState([

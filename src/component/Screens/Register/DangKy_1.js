@@ -12,12 +12,12 @@ import {
     Image,
     ScrollView, SafeAreaView
 } from 'react-native';
-import Option from "../Option"
+import Option from "../../Option"
 import 'react-native-gesture-handler';
 
 
 const DangKy_1 = ({ navigation }) => {
-    var yourPicture = require('../../../assests/icon.png');
+    var yourPicture = require('../../../../assests/icon.png');
     const [tenPH, onChangeTenPH] = useState('Tên phụ huynh');
     const [SDT, onChangeSDT] = useState('Số điện thoại');
     const [Email, onChangeEmail] = useState('Email');

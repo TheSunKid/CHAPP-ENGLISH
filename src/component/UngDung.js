@@ -89,8 +89,6 @@ export default function UngDung({ navigation }) {
                 </TouchableOpacity>
 
             </View>
-
-
         </View>
     )
 }

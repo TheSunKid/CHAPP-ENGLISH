@@ -12,9 +12,9 @@ import {
     Button,
     TextInput
 } from 'react-native';
-import Option from "./Option"
+import Option from "../../Option"
 import { TouchableOpacity } from "react-native-gesture-handler";
-const DangNhap = ({ navigation }) => {
+const Login = ({ navigation }) => {
     const [SDT, onChangeSDT] = useState('Số điện thoại');
     const [Password, onChangePass] = useState('Password');
     function NAV() {
@@ -23,7 +23,7 @@ const DangNhap = ({ navigation }) => {
     function NAV_Next() {
         navigation.navigate('UngDung');
     }
-    var yourPicture = require('../../assests/icon.png');
+    var yourPicture = require('../../../../assests/icon.png');
     return (
         <View style={styles.container}>
             <View style={styles.fixToText}>
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
     }
 
 })
-export default DangNhap;
+export default Login;
