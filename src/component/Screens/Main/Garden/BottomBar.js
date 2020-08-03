@@ -8,7 +8,7 @@ import TabToy from './BottomTab/TabToy'
 import TabRank from './BottomTab/TabRank'
 import TabProfile from './BottomTab/TabProfile'
 
-export default function BottomBar() {
+export default function BottomBar(props) {
   const iconHome = require('./../../../../../assests/gardenkinder/iconHome.png')
   const iconProfile = require('./../../../../../assests/gardenkinder/iconProfile.png')
   const iconToy = require('./../../../../../assests/gardenkinder/iconToy.png')
@@ -33,6 +33,10 @@ export default function BottomBar() {
       icon: iconRank
     },
   ]
+
+  const goToScreen = (screenName) => {
+
+  }
   return (
 
     <View style={styles.container}>
@@ -41,6 +45,7 @@ export default function BottomBar() {
         <NavButton
         screenName={item.screen_name}
         icon={item.icon}
+        on
       />
         )
      }) 

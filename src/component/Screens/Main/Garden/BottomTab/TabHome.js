@@ -17,13 +17,19 @@ export default function TabHome({ navigation }) {
 
     const background = require('../../../../../../assests/gardenkinder/bg.png')
 
+    const clickGoToScreen = (screenName) => {
+      if(screenName) navigation.navigate(screenName);
+    }
     return (
         <View style={styles.container}>
             <ImageBackground
             source={background} 
             style={styles.image}
             >
-            <BottomBar />
+            
+            <BottomBar 
+              goToScreen={clickGoToScreen}
+            />
             </ImageBackground>
         </View>
     )
