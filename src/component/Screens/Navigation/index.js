@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Auth from "./AuthNavigation";
 import Splash from "./SplashNavigation"
+import MainApp from "./MainAppNavigation"
 
 const MainScreen = createStackNavigator();
 
@@ -16,6 +17,7 @@ const NavigationContainerTag = () => {
         >
             <MainScreen.Screen name="Splash" component={Splash} options={{ headerMode : 'none' }} />
             <MainScreen.Screen name="Auth" component={Auth}  options={{ headerMode : 'none' }} />
+            <MainScreen.Screen name="MainApp" component={MainApp} options={{ headerMode : 'none' }} />
         </MainScreen.Navigator>
     </NavigationContainer>
   );

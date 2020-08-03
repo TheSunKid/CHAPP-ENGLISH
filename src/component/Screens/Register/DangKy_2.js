@@ -19,7 +19,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { Dropdown } from 'react-native-material-dropdown-v2'
 import { sin } from "react-native-reanimated";
 const DangKy_2 = ({ navigation }) => {
-    var yourPicture = require('../../../../assests/icon.png');
+    var yourPicture = require('../../../../assests/main_logo.png');
     const [tenBe, onChangeTenBe] = useState('Họ tên bé');
 
     function NAV() {

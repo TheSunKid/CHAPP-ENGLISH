@@ -32,7 +32,7 @@ const styles = {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'orange'
+        
     },
     textStyles: {
         color: 'white',
