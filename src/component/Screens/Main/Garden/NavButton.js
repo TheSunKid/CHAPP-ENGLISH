@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
 const NavButton = props => {
-    const goToScreen = () => {console.log(props)}
+    const goToScreen = (screenName) => {props.buttonClickGoToScreen(screenName)}
     return (
         <View>
             <TouchableOpacity onPress={() => goToScreen(props.screenName)}>

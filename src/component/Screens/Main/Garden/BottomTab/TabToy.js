@@ -12,17 +12,23 @@ import {
     TouchableOpacity,
     Text
 } from 'react-native';
+import BottomBar from '../BottomBar'
 export default function TabToy({ navigation }) {
 
     const background = require('../../../../../../assests/gardenkinder/bg.png')
     const Tab = createMaterialBottomTabNavigator();
+
+    const clickGoToScreen = (screenName) => {
+      if(screenName) navigation.navigate(screenName);
+    }
     return (
         <View style={styles.container}>
             <ImageBackground
             source={background} 
             style={styles.image}
             >
-            
+              
+             <BottomBar   goToScreen={clickGoToScreen}/>
             </ImageBackground>
         </View>
     )

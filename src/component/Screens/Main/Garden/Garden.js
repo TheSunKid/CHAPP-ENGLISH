@@ -1,41 +1,54 @@
+import * as React from 'react';
+import { Text, View,Image, Dimensions } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from './BottomTab/Ionicons'
+import TabHome from './BottomTab/TabHome'
+import TabToy from './BottomTab/TabToy'
+import TabRank from './BottomTab/TabRank'
+import TabProfile from './BottomTab/TabProfile'
 
-import React, { useState } from "react";
-import 'react-native-gesture-handler';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+const background = require('./../../../../../assests/bottomBar_bg.png')
 
-import {
-    StyleSheet,
-    View,
-    Dimensions, ImageBackground
-} from 'react-native';
-import BottomBar from './BottomBar'
+const Tab = createBottomTabNavigator();
 
-export default function KinderGaten({ navigation }) {
+export default function Home(){
+  return (
+    <View style={{flex : 1, flexDirection:'column-reverse'}}>   
 
-    const background = require('./../../../../../assests/gardenkinder/bg.png')
-    const background_top = require('./../../../../../assests/gardenkinder/bg_top.png')
-    const background_bottom = require('./../../../../../assests/gardenkinder/bg_bottom.png')
-    return (
-        <View style={styles.container}>
-            <ImageBackground 
-                source={background}
-                style={styles.image}
-            >
-            <Text>Garden</Text>
-         
-            </ImageBackground>
-        </View>
-    )
+        <Image
+          style={{resizeMode: 'contain', position: 'absolute',}}
+          source={background}
+        />
+        <Tab.Navigator
+          screenOptions={({ route }) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              return <Ionicons name={route.name} />;
+            },
+          })}
+          tabBarOptions={{
+            height:100,
+            showLabel:false,
+            activeBackgroundColor:'transparent',
+            inactiveBackgroundColor:'transparent',
+            tabStyle:{
+              
+            },
+            style:{
+              height:100,
+              borderTopWidth:0,
+              backgroundColor:'transparent',
+              flexDirection: 'column-reverse'
+            }
+          }}
+
+          >
+          <Tab.Screen name="TabHome" component={TabHome} />
+          <Tab.Screen name="TabToy" component={TabToy} />
+          <Tab.Screen name="TabProfile" component={TabProfile} />
+          <Tab.Screen name="TabRank" component={TabRank} />
+        </Tab.Navigator>
+      </View>
+  );
 }
-const styles = StyleSheet.create({
-    image: {
-        flex : 1,
-        resizeMode:'contain',
-       
-    },
-    container: {
-        flex: 1,
-        flexDirection:'column',
-        justifyContent:'space-between',
-      },
-})
+  

@@ -34,8 +34,8 @@ export default function BottomBar(props) {
     },
   ]
 
-  const goToScreen = (screenName) => {
-
+  const buttonClickGoToScreen = (screenName) => {
+      props.goToScreen(screenName)
   }
   return (
 
@@ -43,9 +43,10 @@ export default function BottomBar(props) {
       {navButton.map(item => {
         return(
         <NavButton
+        key={item.screen_name}
         screenName={item.screen_name}
         icon={item.icon}
-        on
+        buttonClickGoToScreen={buttonClickGoToScreen} 
       />
         )
      }) 

@@ -12,10 +12,14 @@ import {
     TouchableOpacity,
     Text
 } from 'react-native';
+import BottomBar from '../BottomBar'
 export default function TabProfile({ navigation }) {
 
     const background = require('../../../../../../assests/gardenkinder/bg.png')
     const Tab = createMaterialBottomTabNavigator();
+    const clickGoToScreen = (screenName) => {
+      if(screenName) navigation.navigate(screenName);
+    }
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -23,6 +27,7 @@ export default function TabProfile({ navigation }) {
             style={styles.image}
             >
             <Text>Profile</Text>
+            <BottomBar   goToScreen={clickGoToScreen}/>
             </ImageBackground>
         </View>
     )
